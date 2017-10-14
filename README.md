@@ -24,6 +24,12 @@ another mutation, of the MVERB with 8 delay lines and 4 allpass added + some par
 
 
 
+MODEL 277
+
+a feedback delay tool, freely inspired from B 277 ;)
+
+
+
 LOGIC
 
 a simple module for boolean logic
