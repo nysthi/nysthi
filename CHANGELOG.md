@@ -1,45 +1,45 @@
 
-######v0.4.0B 2017-10-22
+v0.4.0B 2017-10-22
 
-#- LOGIC 
+- LOGIC 
 	removed module (obsolete)
 
-#- MVERB 
+- MVERB 
 	now is 1 to 1 equivalent to the mVerb
 
-#- HI-VERB
+- HI-VERB
 	removed clear during room resize
 
-#- TWISTEDMVERB
+- TWISTEDMVERB
 	removed clear during room resize
 
-#- MODEL277
+- MODEL277
 	removed filters from feedback paths
 	removed smoothers on parameters changes
 	timing is now the same as the Buchal 277 from 5 to 200 msecs
 	added 10x time multiplier, bringing the time from 50 to 2000 msecs
 	solved a bug on feeback paths 3 and 4
 
-#- NYSTEREOPHASER
+- NYSTEREOPHASER
 	added new stero phaser, original design, based on 4th orders Allpasses (WOW :D)
 	
 
-######v0.4.0 2017-10-15 FIRST RELEASE
+v0.4.0 2017-10-15 FIRST RELEASE
 
-#- MVERB
+- MVERB
 	a VCV RACK port of the mverb
 	https://github.com/martineastwood/mverb
 
-#- HI-VERB
+- HI-VERB
 	a mutation of the MVERB using HIPASS filtering
 
-#- TWISTEDMVERB
+- TWISTEDMVERB
 	another mutation, of the MVERB with 8 delay lines and 4 allpass added 
 	+ some parameter tweaking
 
-#- MODEL277
+- MODEL277
 	a feedback delay tool, freely inspired from Buchla 277
 
-#- LOGIC
+- LOGIC
 	a simple module for boolean logic, Was my gym to learn VCV modules
 
