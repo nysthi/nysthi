@@ -1,36 +1,16 @@
 # nysthi
-vcv rack plugins repo
+vcv rack plugins repo 
+
+# NYSTHI modules
+
+![](https://github.com/antoniotuzzi/nysthi/blob/master/images/nysthiCurrentSet.png)
+
+This package will contribute with some effects to the fantastc VCV world
+
+A short description of the available modules is on my wiki:
+
+https://github.com/antoniotuzzi/nysthi/wiki
 
 
 
-MVERB
-
-a VCV RACK port of the mverb
-
-https://github.com/martineastwood/mverb
-
-
-
-
-HI-VERB
-
-a mutation of the MVERB using HIPASS filtering
-
-
-
-TWISTEDMVERB
-
-another mutation, of the MVERB with 8 delay lines and 4 allpass added + some parameter tweaking
-
-
-
-MODEL 277
-
-a feedback delay tool, freely inspired from B 277 ;)
-
-
-
-LOGIC
-
-a simple module for boolean logic
 
