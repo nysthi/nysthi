@@ -1,4 +1,17 @@
 
+v0.4.0C 2017-10-24
+
+- NYSTEREOPHASER
+	debuggin nasty nysthi noise (thanks Ivan!)
+	added 4 different algorithms
+	debbugged light show
+	added 4 waveshapes for inner vco
+
+- SURVEILLANCE
+	new module: one control to send 10 different voltages
+	the main pot goes from -5 to +5
+	all the outs are controlled by attuenverters
+
 
 v0.4.0B 2017-10-22
 
