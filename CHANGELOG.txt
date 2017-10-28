@@ -1,4 +1,39 @@
 
+v0.4.0D 2017-10-24
+
+- some little restyling (all the outputs are black)
+
+- NYSTEREOPHASER 
+	added full stereo input
+
+- SURVEILLANCE
+	added switch to have 2 ranges 
+		A) from -5v to +5v
+		B) from 0v to +10v
+
+- NYSTEREOCHORUS
+	new module,a stereo chorus with some nice new params
+
+- DUALSIGNALDELAYER (aks 2D)
+	dual delay from 0 to 2000 msecs
+	both delays are CV controllable
+
+- NYENVFOLLOWER
+	a classic Envelope Follower with :
+	
+		A) GAIN IN (multiply the incoming signal form 1 to 10)
+		B) ATTACK time (from 0.5 to 250 msecs)
+		C) RELEASE time (from 0.5 to 250 msecs)
+		D) SCALE multiply the signal for -20v to 20v
+		E) OFFSET add to the signal from (-20v to 20v)
+		F) DELAY ENV delays the generated signal from 0 to 200msecs
+		G) ENVELOPE OUT the generated signal
+		H) DELAY SIGNAL delays the original signal from 0 to 200 msecs
+		I) SIGNAL OUT the original signal in, shifted by DELAY SIGNAL
+		K) OSZI (oscilloskope) ON/OFF button (to spare cpu time!)
+		L) SCALE gain of the signal and time
+		
+
 v0.4.0C 2017-10-24
 
 - NYSTEREOPHASER
