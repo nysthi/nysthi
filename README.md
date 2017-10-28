@@ -1,5 +1,5 @@
 # nysthi
-vcv rack plugins repo 
+vcv rack plugins repo  
 
 # NYSTHI modules
 
