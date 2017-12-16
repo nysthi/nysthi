@@ -1,6 +1,6 @@
 # NYSTHI modules for VCV Rack 
 
-![](https://raw.githubusercontent.com/nysthi/nysthi/master/images/nysthiCurrentSet5.png)
+![](https://raw.githubusercontent.com/nysthi/nysthi/master/images/nysthiCurrentSet6.png)
 
 # MVerb
 
@@ -183,3 +183,39 @@ QUANTIZED RANDOM VOLTAGES
 
 STORED RANDOM VOLTAGES
   * Random with SKEWING function (CV controllable) to have more events in LOW MID or HIGH ranges
+
+# SOU UTILS
+---- perfect companion for the SOYMODELSOU, to scale ad create arabesque
+---- Is 3 parts of 2 repeated sections
+------ SCALER OFFSETTER 1 & 2 (2 section equivalents)
+-------- ACCEPT AUDIO or CV SIGNAL IN
+-------- SCALE for -2 to +2 times, the CV accepts from 0 to 10V and is scaled to 0->1 multiplied SCALE value
+-------- scale function = SCALE or (if plugged in a CV) (SCALE * CVIN * 0.1 * 0.5);
+-------- OFFSET from -10v to +10v
+-------- OFFSET CV accepts any value
+-------- final OFFSET FORMULA = clamp(OFFSET + OFFSET CV , -10, +10)
+-------- output AUDIO or CV
+
+------ OCTAVE FOLDER 1 & 2 (2 section equivalents)
+------ for any voltage coming in IN OVER MAX will be subtracted 1.0 till is reported UNDER MAX
+------ for any voltage coming in IN UNDER MIN will be added 1.0 till is reported OVER MIN
+------ IS perfect to use with Quantized RV section N^2 of the SoyMODELSOU, to reports the voltage into certain octaves
+-------- ACCEPT a SIGNALCV type typically
+-------- MIN is set from 0 to 9V
+-------- MAX is set from 1 to 10V
+-------- if MAX is equal or less than MIN, is set to MIN + 1
+-------- OUTPUT the FOLDED SIGNALCV
+
+------ ASR 1 & 2 (2 section equivalents)
+-------- is a 4 cells ASR
+-------- accept SIGNALCV or AUDIO IN
+-------- EVERY PULSE advance the content of the cells
+
+
+-- VECTOR MIXER
+---- is a mixer working in a 2d plane. the "joystick" position could be set by MOUSE, by X & Y position
+---- and by AZIMUTH & MAGNITUDE. X & Y has precedence on AZI & MAGN that has precedence on MOUSE.
+---- INPUT could be SIGNAL AUDIO or CV. The vector mixer is highly inspired to joystick and
+---- vector functions of the Prophet VS.
+---- Combined with JW XYPAd can emulate the 2D Vector Envelope too
+
