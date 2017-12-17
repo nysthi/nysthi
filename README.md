@@ -1,6 +1,6 @@
 # NYSTHI modules for VCV Rack 
 
-![](https://raw.githubusercontent.com/nysthi/nysthi/master/images/nysthiCurrentSet6.png)
+![](https://github.com/nysthi/nysthi/blob/master/images/nysthiCurrentSet7.png)
 
 # MVerb
 
