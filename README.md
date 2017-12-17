@@ -219,3 +219,20 @@ STORED RANDOM VOLTAGES
 ---- vector functions of the Prophet VS.
 ---- Combined with JW XYPAd can emulate the 2D Vector Envelope too
 
+
+-- QUAD PANNER
+---- is an old style sound source placement using a quadraphonic system
+---- implements some of the functionalities of a single channel of the Buchla 227e
+---- position of the source can be established with MOUSE, or by X and Y Position
+---- or by AZIMUTH and MAGNITUDE, or by SWIRL (a la 227e)
+---- the SWIRL is internal LFO that rotates the sound source for teh 4 outputs, with RATE
+---- and AMPLI (is the MAGNITUDE, again...)
+---- X & Y positioning takes precendece on SWIRL that takes precendece on setting AZIMUTH (and MAGNITUDE) and on
+---- the PANNING is LINEAR and becomes EQUAL POWER PANNING activating the FLAG
+---- Activating the flag INFINITE DISTANCE CENTER, the center becomes an AUDIO BLACK HOLE
+---- the audio disappear if the magnitude approximates to ZERO
+
+
+-- HOTTUNA
+----- FREQ TO VOLTAGE now tuned on FUNDAMENTALS VCOs (unison tracking perfect pitch)
+
