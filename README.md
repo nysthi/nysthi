@@ -236,3 +236,19 @@ STORED RANDOM VOLTAGES
 -- HOTTUNA
 ----- FREQ TO VOLTAGE now tuned on FUNDAMENTALS VCOs (unison tracking perfect pitch)
 
+-- NYECHOECOECO
+---- a virtual BINSON Echorec homage, with 6 play HEADS
+---- PARAMETERS:
+----- SPEED to trim the speed of the disc (the speed is expressed in CM per second)
+----- a SPEED of about 12 cm/s is exactly 1 round per second
+----- EVERY PLAY HEAD can be activated by BUTTON (on the HEAD) or by TRIG
+----- EVERY PLAY HEAD has a trimming function (to virtual move the headform -20% to +20% around the disc)
+----- EVERY HEAD has a display for the current delay
+----- EVERY HEAD has a volume (for the delay mixed)
+----- EVERY HEAD has a TAP out TAP in (so you can process a delayed signal and insert it back in the chain)
+----- THE SWELL is activated deactivating the ERASE HEAD
+----- THE SWELL pot controls from ECHO to infinite feedback (beware)
+----- DRY - WET is a mix from original input signal and the processed signal
+----- INPUT and OUTPUT have both a gain control
+----- INPUT has a simulated OCCHIO magico: if the 2 wings connect in the center, signal is clipping
+
