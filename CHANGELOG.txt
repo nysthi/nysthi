@@ -1,3 +1,486 @@
+v0.6.5 (2018-06-18)
+-- compatibility release for RACK 0.6.1
+
+
+v0.6.4.1  2017-06-16
+-- SCALA QUANTIZER
+-- solved a crash for duplicate symbols in Scala Quantizer
+
+
+v0.6.4  2017-04-14
+-- DEEPNOTE
+---- attempt to create a THX sound type generator
+---- there 4 classes of frequencies
+---- freq one is spread on 5 octeves
+---- freq 2 on 6 octaves
+---- freq 3 and4 on low mid and high
+---- there are PAN animators and SPECTRUM animators (and AMPLI animators too)
+---- this will consume on my MAC about 50% of the resources, so best use is to record it, alone...
+
+
+-- EQUAL DIVISION QUANTIZER
+---- ADD CV in for both N and X variables (of the "N th root of X")
+---- REAL TIME change of the display to represent the OCTAVE and TUNING variations too
+---- ADD Input and output 2, 3 and 4 to have microtonal chords based on the same scale
+     (if you need more notes, just use another ED-QUANT)
+
+-- SQUONK
+---- feature request: change color for the case ONLY CV : from dark yellow to BLUE
+
+-- CLOCK MULTIPLIER
+-- XATTO TIME
+-- CONST ADD MULT
+---- corrected value skewing whne draggin and the screen is zoomed
+
+
+v0.6.3  2017-04-08
+
+-- EQUAL DIVISION QUANTIZER
+---- inspired by discussions with Kent, Edward and Scott
+        https://www.facebook.com/groups/vcvrack/permalink/171694843490668/
+---- It is a grid create using the formula  "Nth root of X" where N is the first field and X the second field
+---- You can use and REAL number, so you can have for example a scale  63.333ed1.6666  (63+1/3ed5/3)
+---- both N and X fields are draggable editable
+---- example N = 12 and X = 2 is the standard western 12th root of 2
+---- or N = 25 and X = 5 gives you the Stockhausen's 25ed5 scale
+---- the midi map mode, maps the midi notes (scaled 0.083333) to first 127 degree of the current scale
+---- the pure quantize mode, quantize to the closest voltage of the grid
+---- TUNING and OCTAVE are standard help for user for fine tuning
+
+
+-- SCALA QUANTIZER
+---- now support all types of SCL types (removed the boundary on perfect final RATIO (like 2/1 ro 3/1 ro 5/1 ))
+
+-- CLOCK MULTIPLIER
+---- ADDED autosync after a RESET (at first computed time)
+
+
+v0.6.2  2017-03-30
+
+-- SPECTRAL
+---- a real time spectrograph wanna be,
+---- is using very very little of CPU
+---- explore different visualizations and windowing functions using the contextual menu
+
+-- QUAD SIMPLER
+---- bug solved: duplication and audio file persistance
+---- added DRAG and DROP for audio files
+
+-- COMPLEX SIMPLER
+---- bug solved: duplication and audio file persistance
+---- added DRAG and DROP for audio files
+
+-- 4DCBLOCK
+---- solved a crosstalk bug (some cleaning for the 4 dc filters!)
+
+-- CLOCK MULTIPLIER
+---- ADDED reset by trig or by TAP to align all the subclocks
+
+-- SCALA QUANTIZER
+---- added MIDI MAP mode
+
+-- MODEL277
+---- protect from init to time ZERO
+
+v0.6.1  2017-03-29
+
+-- QUAD SIMPLER SLICER QUANTIZER
+---- 4 quantizer
+---- 10v is divided from 1 to 99 slices, and IN VOLTAGE is quantized to the closest
+---- perfect to use with simpler: load a LOOP and set to 16 or 8 slices
+---- user SOU as Voltage source
+
+-- QUAD SIMPLER
+---- CRASH: in version 0.6.0 the load button is incompatible: removed
+---- LOADING is via CONTEXT MENU
+---- ADDED START-CV parameter (to set the start using CV 0V start, 10V end)
+---- protect from opening EMTY files
+
+-- COMPLEX SIMPLER
+---- protect from opening EMPTY files
+
+-- SCALA QUANTIZER
+---- protect from opening wrong SCL files
+
+
+v0.6.0.0  2017-03-08
+
+-- 8 ATTACK DECAY
+---- 8 AD EG with :
+---- Attack control
+---- Decay control
+---- LINEAR - EXPONENTIAL control
+---- SCALE control (with inversion)
+---- TAP to single TRIG
+---- IN PULSE to SINGLE TRIG
+---- LOOPED MODE ON / OFF
+---- End OF RISE (attack) PULSE OUT and LED
+---- END of CYCLE (decay) PULSE OUT and LED
+---- VCA IN
+---- VCA OUT
+---- Envelope signal OUT
+---- Led signal out
+---- UNITY MIX button (if ON, the EG value will be summed and presented to the total OUT)
+----
+---- GLOBAL CONTROLS :
+---- ATTACK for all 8  + CV IN for all 8
+---- DECAY for all 8  + CV IN for all 8
+---- LIN-EXP for all 8
+---- SCALE for all 8
+---- VCA IN global
+---- VCA OUT global
+---- UNITY MIXER OUTPUT
+
+-- CLOCK MULTIPLIER
+---- CLK IN accept a clock (or a LFO )
+---- RESET button will reset the TIME computer
+---- the GREEN LED indicates that the TIME computer is in a stable state
+---- CLK OUT 1, CLK OUT 2 and CLK OUT 3 are the same
+---- the RED display is the time multiplier from 0.01 to 99.9999
+---- is a DRAGGABLE display for precise value inputs
+---- the OUTPUT put the multiplied CLOCK out
+
+
+-- CONST ADD MULT
+---- is a QUAD PRECISE constant, ADDER, MULTIPLIER.
+---- "A IN" is OPERATOR 1
+---- "B IN" is OPERATOR 2
+---- "B OUT" is a CHAIn out of the OPERATOR 2
+---- the DISPLAY is thB value and can be set precisely using MOUSE drag
+---- the MOUSE dragging is positional, the more you are on the left, the more faster the value is updated
+---- B value can be set precisely til 0.0001 steps
+---- right clik will reset to 0
+---- "A + B" output is the sum of A + B. if A is missing, is 0 + B
+---- "A x B"output is the product of A x B. if A is missing, is 0 x B
+
+
+-- XATTO TIME
+---- defaul gain for IN2 to ZERO (feature request)
+
+-- SCALA QUANTIZER
+---- set octave and tuning to ZERO on reset (bug)
+---- move all the possible UI operations out of the engine thread
+---- bug importing non regular scl files (colundi is not octave based)
+---- bug remove USELESS duplicate steps
+---- bug solved crash change scala during execution
+
+-- SOU UTILS
+---- add overflow to both ASR
+---- ASR 2 is clocked by ASR 1 in CLOCK if no clock in ASR2 clock in
+
+-- DISSONANTVERB & PLATEVERB
+---- corrected a nasty bug that was crashing RACK reopening a patch
+
+-- NY1METER
+---- smoother PEAK descending
+
+-- NY2METER
+---- smoother PEAK descending
+
+
+v0.5.13.0  2017-01-22
+
+-- XATTO TIME (4 delays)
+---- 4 delays
+---- every delay can accept audio or CV
+---- delay from 0.01 msecs to 9999.99 msecs
+---- click and drag to set PRECISE timing
+---- no filter IN or OUT
+---- there are 2 IN, the IN2 is controlled by an attenenverter (to create feedbacks)
+---- every delay is clockable and tempo is computed with the tempo detector
+---- the detected tempo is multiplied by a factor from 1 to 99
+
+-- SCALA QUANTIZER
+---- based on SCL files (scala files)
+---- documentation here: http://www.huygens-fokker.org/scala/
+---- QUANTIZERS are selected using contextual menu
+---- new SCALA QUANTIZERS can be added using the contextual menu "ADD NEW SCL File..."
+---- the scales are stored into the Rack/plugins/nysthi/res/microtuning/scala_scales/ directory
+---- feel free to add and remove as needed
+---- SCL are loaded at startutp
+---- the GREEN DISPLAY shows:
+------ ROW 1: the octave and the degree in the octave: for example "3-7" means degree 7 of octave 3
+------ ROW 2: the octava and the original ratio or value in the original file
+------ ROW 3: current value in Hz assuming C4 i     s Hz 261.63
+------ ROW 4: curret quantized voltage associated to quantization
+---- the OCTAVE DISPLAY DRAGGABLE let's you move the octave from -2 to +2 for the quantization
+---- the TUNE DISPLAY DRAGGABLE let's you move from -.99 to +.99 the current voltage value
+
+
+-- 4DCBLOCK
+---- it is possible to set the HP frequency from PRESETs in the contextual menu (5, 10, 15, 20  30 Hz)
+
+-- SQUONK
+---- added RED mode: end of sequence marker
+
+-- COMPLEX SIMPLER
+---- added EOC (End of Cycle) pulse: triggered when the currentime hits the END
+---- added visual timer representing current time in recording mode and length of the sample in play mode
+
+-- QUAD SIMPLER
+---- added 4 EOC (End of Cycle) pulse: triggered when the currentime hits the END
+
+-- TIMEX
+---- corrected name in the MENU, should be TIMEX (not timeoftheday)
+
+v0.5.12.0  2017-01-21
+
+-- DISSONANTVERB
+---- it's a modification of the PLATEVERB inserting 2 pitchshifter in the feedback loop
+---- the effect is quite dramatic (and soundtrackable)
+----- DISSONACE1 controls the shifting of the first DISSONATOR (CV controllable)
+----- DISSONACE1 MIX controls balance between original signal and shifted signal
+----- DISSONACE2 controls the shifting of the second DISSONATOR (CV controllable)
+----- DISSONACE2 MIX controls balance between original signal and shifted signal
+------- DISSONACE1 and DISSONACE2 have different curves: smoother the 1, larger range the 2
+----- all the other parameters are PLATEVERB equivalent
+
+-- PLATEVERB
+---- it's a new reverb based on the famous Dattorro paper. Was tweaked to adapt it to every samplerate and to add
+---- Early reflections
+---- tail is very smooth!
+---- There is no control for the roomsize, you need to work on the decay
+------ PARAMS
+------ EARLY REFLECTIONS MIX: ER are 2 8 tap fractional delay lines with 16 differents times. the mix is a
+balance between incoming signal and the reflections
+------ PREDELAY from 0 tp 400 msecs
+------ PREDELAY MIX, balance from previous stage and the delayed signal
+------ BANDWIDTH is the frequency passed
+------ DECAY the control of the tail (feedback)
+------ DAMPING
+------ WET-DRY balance between input and effect
+------ BOOST from 0 to 2.0 to push up or down the signal if needed
+------ FREEZE (triggable too) freeze the effect with the infinite decay
+
+-- TIMEX
+---- a CLOCK using the standard unix time functions and representing current HOUR (of your computer)
+---- data represented and outputs:
+------ current HOUR + RAMP representing current HOUR in a day in 0-10v scale + PULSE when DAY changes
+------ current MINUTE + RAMP representing current MINUTE in a HOUR in 0-10v scale + PULSE when HOUR changes
+------ current SECOND + RAMP representing current SECOND in a MINUTE in 0-10v scale + PULSE when MINUTE changes
+------ current 1/10 of SECOND + RAMP representing current 1/10 in a SECOND in 0-10v scale + PULSE when SECOND changes
+------ current 1/100 of SECOND + RAMP representing current 1/100 in 1/10 in 0-10v scale + PULSE when 1/10 of SECOND changes
+---- ALARMS:
+---- are 2 equivalent
+------ to set the alarm, click and drag on the display
+------ to ARM the ALARM, press the ON-OFF button
+------ when current time HITS the ALARM set, a PULSE is generated and a GATE activated, and the ALARM is set to OFF
+---- COUNTERS:
+---- are 2 equivalent
+------ to set the counter, click and drag on the TARGET display
+------ to activate the counter, press the ON-OFF button
+------ to run the counter, connect a PULSE to the PULSE IN, if ON the counter will start to COUNT
+------ if the COUNTER is ON and COUNTER hits the TARGET a PULSE is GENERATE from PULSE OUT and the COUNT is set to 0
+
+-- 4DCB
+---- a 4 times DC BLOCK filter, current sample rate aware
+---- needed to avoid unwanted Direct Current build up a the end of a module
+
+-- complex DAHD
+---- added envelope chain IN, to have complex chained envelopes
+
+-- SINGLE METER
+---- just a new meter: someone asked for a longer one. Same commands (via contextual menu) (feature request)
+
+-- LFOMULTIPHASE
+---- increased resolution from 0.00001 Hz to half of current sampling rate (beware, it is always an LFO
+---- and aliasing is waiting to appear!)
+---- added the ability to set the frequency via TEXT field, the computation is istantaneous
+---- frequency can be expressed as BPM too, for example you could write "120 bpm" and you should get 2Hz
+---- can be expressed as Quarter Per Minute , for example you could write "120 qpm" and you  get 2Hz
+---- can be expressed as Eights Per Minute , for example you could write "120 epm" and you  get 4Hz
+---- can be expressed as Sixteenths Per Minute , for example you could write "120 spm" and you  get 8Hz
+---- added SYNC, to reset teh phase of the LFO (to do multiple LFO synchronization)
+
+-- HOT TUNA
+---- Improved visibility of the screen (frequency is fully visible) (feature request)
+---- removed the annoying NaN appearing in the F2V part (sometimes...) (thanks Martin L)
+
+-- MASTER RECORDER
+---- added timer to check recording time (feature request)
+
+-- MULTITRACK RECORDER
+---- added timer to check recording time (feature request)
+
+
+
+v0.5.11.0  2017-12-26
+
+-- DUALFEEDBACKECHO
+-- 2 echos almost the same, the only differences are minimum maximum time
+---- ECHO 1 goes from 0.05 msecs to 2000 msecs
+---- ECHO 2 goes from 0.01 msecs to 200 msecs
+---- TIME is the time control
+---- CV is summed to TIME (if present)
+---- TRIGTIME if used, overrides TIME and CV. Is a time computer, calculates timing of the incoming pulses
+      and synchronized the echo
+---- You can drive also with a VCO in input (or an LFO, of course)
+---- FEEDBACK is amount of the ECHO that is summed back to top of the CHAIN
+---  OUT is the OUT...
+
+
+-- NYECHOecoeco
+---- more flexibilty to time: we are virtual we can do what we want :)
+---- DISC time from SPEED POT is now from 1 cm/s to 100 cm/s
+---- added inertial response
+---- EVERY PLAY HEAD can move till next previous head influence area (+-49% of the current position)
+---- added TAP and TRIG to tempo (you can trig till 4000 cm/s )
+---- when in SYNC
+---- added PANIC button (to clear the buffer immediatly :D :D )
+---- added more control for inner infinite values
+---- added MAGNETIZATION coefficient: represents the inability of the ERASE HEAD to do a complete ERASE
+ if MAGNETIZATION is high you'll get faint repetition also when the ERASE HEAD is active
+
+
+-- LFO MULTIPHASE
+---- for some mysterious reasons the TAP to TEMPO feature was commented out...
+
+
+v0.5.10.0  2017-12-21
+-- NYECHOECOECO
+---- a virtual BINSON Echorec homage, with 6 play HEADS
+---- PARAMETERS:
+----- SPEED to trim the speed of the disc (the speed is expressed in CM per second)
+----- a SPEED of about 12 cm/s is exactly 1 round per second
+----- EVERY PLAY HEAD can be activated by BUTTON (on the HEAD) or by TRIG
+----- EVERY PLAY HEAD has a trimming function (to virtual move the headform -20% to +20% around the disc)
+----- EVERY HEAD has a display for the current delay
+----- EVERY HEAD has a volume (for the delay mixed)
+----- EVERY HEAD has a TAP out TAP in (so you can process a delayed signal and insert it back in the chain)
+----- THE SWELL is activated deactivating the ERASE HEAD
+----- THE SWELL pot controls from ECHO to infinite feedback (beware)
+----- DRY - WET is a mix from original input signal and the processed signal
+----- INPUT and OUTPUT have both a gain control
+----- INPUT has a simulated OCCHIO magico: if the 2 wings connect in the center, signal is clipping
+
+
+-- COMPLEX DAHD
+---- add a second VCA to process in stereo
+
+v0.5.9.0  2017-12-18
+-- SUPPORT for RACK 0.5.1
+
+-- DX7ENVELOPE
+---- emulation of the 4 rates 4 levels DX7 operator envelope
+---- values are like in DX7 from 0 to 1
+---- rates are from super SLOW to hyper FAST
+---- levels are from 0 to MAX
+---- added SCALE (from -1 to 1) and OFFSET (-10 to +10)
+---- 2 inner VCA to control Audio Stereo signals
+---- TRIG (Attack Release) mode or GATED (level 1, level 2 level3SUSTAIN, level 4)
+---- TRIG CHAIN to control more DXEnvelopes with same trig or gate signal
+---- TRIG GATE button
+---- LED to signal the trig or gate status
+
+-- QUAD PANNER
+---- added chaining for cascading QUAD PANNERs (and remove cluttering from and to mixers)
+
+v0.5.8.0  2017-12-12
+-- QUAD PANNER
+---- is an old style sound source placement using a quadraphonic system
+---- implements some of the functionalities of a single channel of the Buchla 227e
+---- position of the source can be established with MOUSE, or by X and Y Position
+---- or by AZIMUTH and MAGNITUDE, or by SWIRL (a la 227e)
+---- the SWIRL is internal LFO that rotates the sound source for teh 4 outputs, with RATE
+---- and AMPLI (is the MAGNITUDE, again...)
+---- X & Y positioning takes precendece on SWIRL that takes precendece on setting AZIMUTH (and MAGNITUDE) and on
+---- the PANNING is LINEAR and becomes EQUAL POWER PANNING activating the FLAG
+---- Activating the flag INFINITE DISTANCE CENTER, the center becomes an AUDIO BLACK HOLE
+---- the audio disappear if the magnitude approximates to ZERO
+
+
+-- HOTTUNA
+----- FREQ TO VOLTAGE now tuned on FUNDAMENTALS VCOs (unison tracking perfect pitch)
+
+
+v0.5.7.0  2017-12-12
+
+-- VECTOR MIXER
+---- is a mixer working in a 2d plane. the "joystick" position could be set by MOUSE, by X & Y position
+---- and by AZIMUTH & MAGNITUDE. X & Y has precedence on AZI & MAGN that has precedence on MOUSE.
+---- INPUT could be SIGNAL AUDIO or CV. The vector mixer is highly inspired to joystick and
+---- vector functions of the Prophet VS.
+---- Combined with JW XYPAd can emulate the 2D Vector Envelope too
+
+-- SQUONK
+---- BUG: missing repetition first step if chained SOLVED
+
+-- HOTTUNA
+---- FEATURE REQUEST: ADD FREQUENCY TO VOLTAGE with signal IN
+---- FEATURE REQUEST: WHEN checking VOLTAGES now is not doing the animation (avoid waste of time for users)
+
+-- COMPLEX SIMPLER
+---- BUG at restart if in ONESHOT mode was cycling (CORRECTED)
+---- FEATURE REQUEST: showing original file name in contextual menu
+
+-- QUAD SIMPLER
+---- FEATURE REQUEST: showing original file names in contextual menu
+
+-- SOU UTILS
+---- FEATURE REQUEST: the OFFSETTER will output a fixed or modulated voltage without an input too
+
+-- NYSTEREOCHORUS
+---- ADDED A DCBLOCK filter
+
+
+v0.5.6.0  2017-12-11
+
+-- SOU UTILS:
+---- perfect companion for the SOYMODELSOU, to scale ad create arabesque
+---- Is 3 parts of 2 repeated sections
+------ SCALER OFFSETTER 1 & 2 (2 section equivalents)
+-------- ACCEPT AUDIO or CV SIGNAL IN
+-------- SCALE for -2 to +2 times, the CV accepts from 0 to 10V and is scaled to 0->1 multiplied SCALE value
+-------- scale function = SCALE or (if plugged in a CV) (SCALE * CVIN * 0.1 * 0.5);
+-------- OFFSET from -10v to +10v
+-------- OFFSET CV accepts any value
+-------- final OFFSET FORMULA = clamp(OFFSET + OFFSET CV , -10, +10)
+-------- output AUDIO or CV
+
+------ OCTAVE FOLDER 1 & 2 (2 section equivalents)
+------ for any voltage coming in IN OVER MAX will be subtracted 1.0 till is reported UNDER MAX
+------ for any voltage coming in IN UNDER MIN will be added 1.0 till is reported OVER MIN
+------ IS perfect to use with Quantized RV section N^2 of the SoyMODELSOU, to reports the voltage into certain octaves
+-------- ACCEPT a SIGNALCV type typically
+-------- MIN is set from 0 to 9V
+-------- MAX is set from 1 to 10V
+-------- if MAX is equal or less than MIN, is set to MIN + 1
+-------- OUTPUT the FOLDED SIGNALCV
+
+------ ASR 1 & 2 (2 section equivalents)
+-------- is a 4 cells ASR
+-------- accept SIGNALCV or AUDIO IN
+-------- EVERY PULSE advance the content of the cells
+
+
+-- SOYMODELSOU MODs:
+---- ADD PULSE in to the FRV1 section. for every pulse a new radom is generated.
+------ A timing function is computed in realtime to have correct smoothing
+---- ADD PROBABILTY to HAVE pulse, from 0 to 1
+---- ADD PROBABILTY CV IN
+---- ADD GATE OUT to FRV1. The gate function works like that: signal is gated till
+------ the smoothing function is up a level decided by the probability setting
+
+---- ADD PULSE in to the FRV2 section. for every pulse a new radom is generated.
+------ A timing function is computed in realtime to have correct smoothing
+---- ADD PROBABILTY to HAVE pulse, from 0 to 1
+---- ADD PROBABILTY CV IN
+---- ADD GATE OUT to FRV2. The gate function works like that: signal is gated till
+------ the smoothing function is up a level decided by the probability setting
+
+---- ADD a section with 3 FLIP-FLOPs for more GATING divertimento
+
+
+-- SQUONK :
+---- BUG for last chained step not triggering
+---- BUG reset now set to the correct position
+---- the CV now is scaled 1/12 V (with modf) to track steps like a keyboard using CV (0.08333 VOLT steps)
+
+-- NYENVFOLLOWER :
+---- SCALE from -5 to +5
+---- OFFSET from -10 to +10
+
+
 v0.5.4.1  2017-12-05
 -- SOYMODELSOU
 ADD: new extra selection for QRV, if DATA SET REPEATABLE is OFF, is guaranteed that all data selected will
