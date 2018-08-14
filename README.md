@@ -1,6 +1,6 @@
 # NYSTHI modules for VCV Rack 
 
-![](https://github.com/nysthi/nysthi/blob/master/images/Screen%20Shot%202018-08-10%20at%2010.18.10.png)
+![](https://github.com/nysthi/nysthi/blob/master/images/allmodules20180815.png)
 
 Modules:
 1. [Reverbs](readme.md#reverbs)
