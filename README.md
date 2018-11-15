@@ -1,5 +1,12 @@
 # NYSTHI modules for VCV Rack 
 
+#### Want a better manual? 
+
+Join the NYSTHI Manual team! https://www.facebook.com/groups/nysthimanual/
+
+Want to see what we've come up with so far? (be nice! we're on pre-alpha releases!) https://github.com/patman023/nysthimanual
+
+
 ![](https://github.com/nysthi/nysthi/blob/master/images/Screen%20Shot%202018-03-29%20at%2023.54.22.png)
 
 Modules:
