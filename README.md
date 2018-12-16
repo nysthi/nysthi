@@ -7,7 +7,7 @@ Join the NYSTHI Manual team! https://www.facebook.com/groups/nysthimanual/
 Want to see what we've come up with so far? (be nice! we're on pre-alpha releases!) https://github.com/patman023/nysthimanual
 
 
-![](./images/allmodules20181128.png)
+![](./images/allmodules20181216.png)
 
 Modules:
 1. [Reverbs](readme.md#reverbs)
