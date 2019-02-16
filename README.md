@@ -2,7 +2,7 @@
 
 ![](./images/allmodules20181022.png)
 
-Here's the changelog on a per-module basis: [nysthi_changelog0.6.39_parsed.txt](./nysthi_changelog0.6.39_parsed.txt)
+Here's the changelog on a per-module basis: [changelog0.6.39_parsed.txt](./changelog0.6.39_parsed.txt)
 
 #### Want a better manual? 
 
