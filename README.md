@@ -1,8 +1,8 @@
 # NYSTHI modules for VCV Rack 
 
-![](./images/allmodules20181022.png)
+![](./images/allmodules20190126.png)
 
-Here's the changelog on a per-module basis: [changelog0.6.39_parsed.txt](./changelog0.6.39_parsed.txt)
+Here's the changelog on a per-module basis: [changelog0.6.41_parsed.txt](./changelog0.6.41_parsed.txt)
 
 #### Want a better manual? 
 
