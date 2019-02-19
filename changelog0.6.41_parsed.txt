@@ -4,6 +4,11 @@ a simple module for boolean logic, Was my gym to learn VCV modules
 
 	0.5.0
 streamlined version, and color codes... (white sockets, inputs, black sockets, outputs)
+
+	0.6.40
+---- added contextual menu to switch VOLTAGE levels between 5v and 10v
+becomes perfect to do all thing related to GATES :D
+
 -------------------------------
 - MVERB
 	0.4.0
@@ -647,6 +652,10 @@ is an old style sound source placement using a quadraphonic system
 
 	0.5.9.0
 added chaining for cascading QUAD PANNERs (and remove cluttering from and to mixers)
+
+	0.6.40
+---- inverted the Y input to be used correctly with Vector Mixer in "joystick or envelope mode"
+
 -------------------------------
 DX7ENVELOPE
 	0.5.9.0
@@ -702,6 +711,17 @@ ADD time multiplier, now the minimum speed is 0.1 cm/sec
 	0.6.37
 ---- solve a crash on win
 ---- corrected some timing when switching to slow mode
+
+	0.6.40
+---- add full stereo support
+---- add ON/OFF buttons for single HEADS repetitions (for the feedback repeat/swell function)
+---- Decouple repeats and simple echo: (you can have a simple echo repetition and no swell/feedback)
+---- the TAP-IN inputs are now correctly feedback in swell mode
+---- added BIAS to simulate hysteresis of magnetic disc, when erase is OFF
+(the more high current bias the more is recorded on top of old recorded data)
+
+	0.6.41
+--- is back to the previous functionalities (for people having it in patches)
 
 -------------------------------
 DUALFEEDBACKECHO
@@ -954,6 +974,12 @@ time computer sample rate update
 you had to multiply for 0.5000 or to have a divide by 3 you had to multiply by 0.3333
 now you can activate the DIVIDER mode and set 2.0 and 3.0
 ---- renamed (visually) CLOCK MULT DIV
+
+	0.6.40
+---- add RESET trig input
+---- add ACTIVE trig input + TAP: if not ACTIVE no CLOCKs are generated
+---- add new mode via context menu: if TRIG IN is unconnected, TRIG OUTs can be muted
+
 -------------------------------
 8 ATTACK DECAY
 	0.6.0
@@ -1024,6 +1050,11 @@ octaves to +8 max (to improve a better mapping for midi mapped notes)
 
 	0.6.34
 ---- support for voltage offset when in MIDIMAP mode
+
+	0.6.40
+---- add new style of quantizer grid (user can still use previous grid switching it with contextual menu)
+---- solved a bug when the quantizer was switching to "non in GRID voltages" (thanks JIM!)
+
 -------------------------------
 DEEPNOTE
 	0.6.4
@@ -2043,6 +2074,19 @@ BIVIO
 	0.6.39
 feature request: added a contextual menu to choose if the UNSELECTED output (for BIVIO1 and BIVIO2) should output LAST VOLTAGE (kind of sample & hold), or 0 VOLTAGE
 
+	0.6.40
+---- add CHAIN OUT TRIG (to reuse the TRIG IN and easily chain it to the other TRIG or INPUTS)
+---- add "routing probability mode" the probability  (using context menu)
+in this new mode for the probability to go to A or to B
+the starting position is not important
+if the probability is at 5%, 19 times out of 20 will switch to A, always
+---- the standard mode remain "switching probability mode"
+is the probability to move from the current position
+so the history is important,
+for example if you are on B
+and probability is at 5% means the only 1 times out of 20 (on average) the bivio switches to A
+(and viceversa)
+
 -------------------------------
 JANNEKER
 	0.6.28
@@ -2584,6 +2628,21 @@ parameters:
 (gate ON is 10 Volts)
   - GATE out is the GATE trig out the yellow LED will indicate current VOLTAGE status
 
+	0.6.40
+---- Added one shot mode: if active, the GLOBAL TRIG in will be valid only one time
+and after the use the RESET button must be used to RESET the ONE SHOT mode
+---- Added clock timing: the time of the clock in input is computed and used as timebase
+for the GATE and DELAY operations.
+If ELSKER is timed, the field represents multiple of the base time
+there is: a CLOCK input, a display showing the frequency of the clock and
+a display showing the time differential between pulses of the clock
+---- Added Randomization to durations and delays: random is function of the current value in the field
+for example if the field contains 0.123 seconds, the random can generate a new value that in the
+200% range of the current value (in this case from 0.001 to 0.246.
+if the delay is 0.000 the range will be considered 0.010
+---- Added GLOBAL RESET TAP-TRIG. When hitting it every programmed gate will immediately stop
+---- MIN time for delay is 0.000 so now can be also instantaneous on TRIG
+
 -------------------------------
 EXPIRED TIME
 	0.6.39
@@ -2618,8 +2677,18 @@ having had requests for a big display tuner, it's like HOTTUNA, but with less fe
 - red glowing means wrong detections
 
 -------------------------------
-name
-	ver
+JIRA JIRA ECHO
+	0.6.41
+
+0.6.40's NYECHOECOECO changes in it's own module
+
+    ---- add full stereo support
+    ---- add ON/OFF buttons for single HEADS repetitions (for the feedback repeat/swell function)
+    ---- Decouple repeats and simple echo: (you can have a simple echo repetition and no swell/feedback)
+    ---- the TAP-IN inputs are now correctly feedback in swell mode
+    ---- added BIAS to simulate hysteresis of magnetic disc, when erase is OFF
+        (the more high current bias the more is recorded on top of old recorded data)
+
 -------------------------------
 name
 	ver
