@@ -1,4 +1,38 @@
 
+v0.6.42 (2019-02-25)
+
+
+-- GRAPHIC METER
+
+---- add pass thru outputs to insert it in a chain
+
+
+-- MULTIVOLTIMETRO
+
+---- add pass thru outputs to insert it in a chain
+
+
+-- JIRA JIRA ECHO
+
+---- exposed the inner LowPass filter: cutoff freq goes from 500Hz to 8kHz (added IN CV too)
+---- boosted volume for summed nodes
+---- add an all gray disk for people don't want running disks (check in
+    YOURRACKINSTALL/plugins/nysthi/res/shapes/ and substitute the JIRAJIRADISK.svg)
+
+
+-- EQUAL DIVISION QUANTIZER
+
+---- change the input field, from DRAG displays to EDIT, WRITE and SET displays
+---- now 0 VOLTS-IN  will always correspond to a 0.0 VOLTS-OUT (added an auto offset when changing scale)
+---- removed a possible crash cause (a connected input at 0 volts can crash it on restart)
+---- add correct refresh of the panel and internal if the scale is changed on the fly
+
+
+-- CLOCK MULTIPLIER
+
+---- solved a case of a non-initialized timer
+
+
 v0.6.41 (2019-02-18)
 
 
