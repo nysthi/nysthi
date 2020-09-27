@@ -1,3 +1,25 @@
+#**v1.0.16 (2020-09-27)**  
+
+
+## SIMPLICITER  
+*	bug: crash caused by peak slice mode (issue #309)
+*	add a new contextual menu `"Do Espen Storø trick (for no clicks in looping samples)"` for cut in the middle swith the 2 parts and xfade: the idea is to obtain non clicking drone loops but someone for sure is going to use in other creative ways
+* add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintining the last DC ouput
+
+## COMPLEX SIMPLER  
+*	bug: was not saving the connected file if the file was drag&drop
+*	bug: start was delayed becasue the anticlick was not inited
+ 
+## QUADSIMPLER
+*	bug: start was delayed becasue the anticlick was not inited
+
+## CONFUSING SIMPLER
+*	bug: start was delayed becasue the anticlick was not inited
+
+
+## Heads-up on Anti-click (in various samplers)
+the more is high the more delay is introduced
+
 
 ## **v1.0.15 (2020-09-22)**  
 
