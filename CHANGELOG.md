@@ -6,25 +6,26 @@
 *	add some new EDIT contextual menu 
 	*	`UNDO (REDO) last (disruptive) edit`:  to be used to recover previous situation after doing an edit on samples
 	*	 `Do Espen Storø trick (for no clicks in looping samples)`   
-	for cut in the middle swith the 2 parts and xfade: the idea is to obtain non clicking drone loops but someone for sure is going to use in other creative ways
+	for cut in the middle switch the 2 parts and xfade: the idea is to obtain non clicking drone loops but someone for sure is going to use in other creative ways
 	* `Do mega random chopping and mix`  amusing command to `destroy the intelligibility` of any speech sample ! (magic!)
 	* `Fade IN and OUT, LINEAR and EXP`
 	
-* add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintining the last DC ouput
+* add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintaining the last DC output
 
 ## COMPLEX SIMPLER  
 *	bug: was not saving the connected file if the file was drag&drop
-*	bug: start was delayed becasue the anticlick was not inited
+*	bug: start was delayed because the anticlick was not inited
  
 ## QUADSIMPLER
-*	bug: start was delayed becasue the anticlick was not inited
+*	bug: start was delayed because the anticlick was not inited
 
 ## CONFUSING SIMPLER
-*	bug: start was delayed becasue the anticlick was not inited
+*	bug: start was delayed because the anticlick was not inited
 
 
 ## Heads-up on Anti-click (in various samplers)
 the more is high the more delay is introduced
+
 
 
 
