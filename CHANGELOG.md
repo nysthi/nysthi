@@ -1,9 +1,15 @@
-#**v1.0.16 (2020-09-27)**  
+#**v1.0.16 (2020-10-04)**  
 
 
 ## SIMPLICITER  
 *	bug: crash caused by peak slice mode (issue #309)
-*	add a new contextual menu `"Do Espen Storø trick (for no clicks in looping samples)"` for cut in the middle swith the 2 parts and xfade: the idea is to obtain non clicking drone loops but someone for sure is going to use in other creative ways
+*	add some new EDIT contextual menu 
+	*	`UNDO (REDO) last (disruptive) edit`:  to be used to recover previous situation after doing an edit on samples
+	*	 `Do Espen Storø trick (for no clicks in looping samples)`   
+	for cut in the middle swith the 2 parts and xfade: the idea is to obtain non clicking drone loops but someone for sure is going to use in other creative ways
+	* `Do mega random chopping and mix`  amusing command to `destroy the intelligibility` of any speech sample ! (magic!)
+	* `Fade IN and OUT, LINEAR and EXP`
+	
 * add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintining the last DC ouput
 
 ## COMPLEX SIMPLER  
@@ -19,6 +25,7 @@
 
 ## Heads-up on Anti-click (in various samplers)
 the more is high the more delay is introduced
+
 
 
 ## **v1.0.15 (2020-09-22)**  
