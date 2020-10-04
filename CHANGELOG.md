@@ -10,7 +10,8 @@
 	* `Do mega random chopping and mix`  amusing command to `destroy the intelligibility` of any speech sample ! (magic!)
 	* `Fade IN and OUT, LINEAR and EXP`
 	
-* add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintaining the last DC output
+* 	add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintaining the last DC output
+*	add `"RELOAD"` new contextual menu: to reload the original file (maybe changed by various edit)
 
 ## COMPLEX SIMPLER  
 *	bug: was not saving the connected file if the file was drag&drop
