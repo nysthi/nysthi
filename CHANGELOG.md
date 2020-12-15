@@ -1,3 +1,101 @@
+#**v1.0.17 (2020-12-05)**  
+
+FEATURE REQUEST: All modules are skinnable now (#318)   
+(Simpliciter, Sussudio,  MusicalBox, MusicalBox2 and TheCage are added)
+
+
+## SIMPLICITER  
+*	bug: missing SYNC for the internal LFO
+*	bug: START and LENGHT mode was not correctly reloaded (#285)
+*  	add a led to visualize the CV out of the env follower
+*	feature request: add RAMP OUT representing the position of the playhead  
+	can be relative to slice or relative to the full sample (#325)
+	  
+## SUSSUDIO  
+*	FEATURE REQUEST: add contextual menu to avoid reset of playhead on keyframe change (#315)  
+  
+  
+## JOOPER  
+*	bug: D channel was missing (#314)
+*	FEATURE REQUEST: add MULTIPLEX in EXCLUSIVE mode (no summing of nodes) (#319)  
+	A goes to A (if both active)  
+	B goes to B (if both active)  
+	C goes to C (if both active)  
+	D goes to D (if both active)  
+	
+	always polyphonic, it's a superswitch-superbridge
+	
+
+## PROGRAMMER
+*	a new OLD sequencer/programmer module    
+*  perfect imitation of the CGS 16 step SERGE programmer with extras   
+*  the programmer can be used as step sequencer, or programmer or keyboard  
+*  contains a minimal quantizer and can output polyphony using channel A  
+	(only 4 channels...)  
+*	it's 16 stages, and every stage contains:  
+	* 	active ON/OFF (if OFF stage will not emit the pulse(s)  
+	*  repetitions (number of subdivisions pulses)   
+	*  SELECT STAGE IN TRIG  
+	*  STAGE SELECTED PULSE OUT (with LED)  
+	*  CHANNEL A, B, C, D, cv out controls with ranges set via contextual menu  
+	*  backward control mode (works with backward clock)  
+		*	RUN = GREEN    
+		*	STOP = RED  
+		*	SKIP = GRAY  
+	*  forward control mode (works with forward clock)  
+		*	RUN = GREEN   
+		*	STOP = RED  
+		*	SKIP = GRAY  
+	*  Select Stage Button, with BLUE led  
+* 	Global controls  
+	*  ADDR input (to address directly a STAGE using CV: the CV is a clipped MIDI note in CV)  
+	*  FORWARD CLOCK input  
+	*  BACKWARD CLOCK input  
+	*  A, B, C, D CV outputs (A is polyphonic, if set by contextual menu)
+	*  TRIG output, common pulse out for every emitting pulses stages (polyphonic when needed)  
+	*  PUSH output, common GATE out when selecting or touching a STAGE (polyphonic when needed)  (can be used to sync more programmers)  
+* 	Contextual Menu  
+	* 	QUANTIZER: a quantizer can be set with various classic scales (select NO QUANTIZER (default) for RAW CV outs)  (if you want more fancy quantizers, use PolyScalaQuantizer or EqualDivisionQuantizer)   
+	*  VOLTAGE MODE to set various ranges for the CV outs  
+	*  ADDR PULSE OUT mode: when changing a stage using a CV in the ADDR input, this flag activates also PULSE out on selection  
+	*  OUTPUT MODE POLY, if active, Channel A + TRIG OUT + PUSH OUT will become 4 channels poly  
+
+
+## POLYRECORDER
+## POLYRECORDER64
+*	add a contextual menu to use the START button only as START button  
+	(not as toggle)    
+  
+  
+## AUTO(X)FADER
+*	minimum fade time from 100msecs to 4 msecs (0.004 secs in the display)
+  
+  
+## JANNEKER
+*	FEATURE REQUEST: autodeactivate if hitting END of LOOP and not in LOOP mode (to have the ONE SHOT mode) (#320)  
+	the feature is in contextual menu
+	
+	
+## POLY SCALA QUANTIZER
+*	FEATURE REQUEST: add root frequency for the applied, scala.   (#313)
+	The base it's always C4 (261.626 Hz)  
+	The field is editable and value is in Hz  
+	You can write also in note form : "C3 -> B4"   
+	the field will autotranslate in correct frequency
+	The frequency can be modulate via CV where 
+	0 -> 10v are mapped from C3 to C5 range  
+	Added a Reset scale root command (to C4) via contextual menu
+	
+	
+## CLOCK MULTIPLIER
+*	FEATURE REQUEST: add voltage outputs for the divided/multiplied clocks (#322)  
+
+
+## BZ-MAPPER  
+## BZ-ENVELOPE  
+*	bug: in some situations with very aligned controlpoints and nodes, we were hitting some bizarre math limits... :D (thanks Mark Sanders for the #324)
+
+
 #**v1.0.16 (2020-10-04)**  
 
 
