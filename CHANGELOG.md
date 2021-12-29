@@ -1,8 +1,899 @@
+#**v2.0.13 (2021-12-29)**
+
+## SIMPLICITER MULTI
+* debug visuals when recording CV in PRE-RECORD MODE
+* moved the INTERPOL(ation) flag on the "Output" side (it's the correct place)
+
+## POLYSEVENSEAS 2
+* fixed a crash with Drag and Drop
+* fixed saved BANKS: correctly reloaded now
+
+## VOLTAGE Dual
+* a DUAL super slim editable inline FIXED VOLTAGE EMITTER (by request)
+
+## LABEL slim
+* a small LABEL (by request)
+
+#**v2.0.12 (2021-12-28)**
+
+## SLIM SIMPLER
+*  new feature: the START of sample control, now controls the STOP/END position if goes in negative and START position if in positive
+
+## SIMPLICITER
+* starts the crossfade time between REC and PLAY to ZERO
+* implement the pause RECORD: pressing on the RED button REC, with the COMMANDKEY down, the REC timer will be stopped and RECORDING will stay in pause until a new TAP (or PULSE) on the REC button for a CONTINUE 
+* debug a crash in headless mode
+* add a new PLAY MODE: PING PONG MODE (via contextual menu)
+* bug: if in "output 0V if stopped" mode, transition between loop - no-loop - loop will mute (corrected)
+
+## SIMPLICITER MULTI
+* a multi track (from 1 to 16 tracks) sample player/recorder 
+* (recording you are on your own! depends on your memory)
+* can do prerecord mode (til 120 secs) or standard record mode, Direct to Disk
+* Playing is always (like in all simpliciter/sampler) using memory
+* can record up to 16 tracks of CV data and save in a WAV file at 100hz (the feature is activated using the "CV" button in INPUT zone
+
+
+## MUSICALBOX MUSICALBOX2
+* add exclusive play mode (activable using contextual menu). When ON, only one sampler at time can play
+
+## POLYSEVENSEAS 2
+* variable geometry of the sample cube 
+* supporting till 8192 points waves (contextual menu from 256 to 8192)
+* from 8 to 64 waves per bank (contextual menu)
+* at startup is the same as the POLYSEVENSEAS standard, loading the base table of 64 x 64 x 256
+but you can do a CLEAN all LOAD banks, change the geometries (the dependent variable is the BANK number, for example if you set 64 waves of 8192 points, there will be only 2 banks (2 x 64 x 8192 = 1048576 sample points)
+or you have a classic geometry of 32 * 16 * 2048 (hosting 32 SERUM banks of 16 waves)
+
+when you fill it, you can save as GLOBAL bank and reuse in the defaults
+
+
+## STEREOCHORUS 2
+* accepting poly signals now (bug)
+
+## PROGRAMMER
+* added commands to copy track to track
+* added command to nudge forward (shift the sequence to the left, one step) and backward (shift the sequence to the right, one step) per track
+
+## NUDGER
+* expander for the SERGE Programmer adding controls for nudging and CV signals  
+* GLOBAL NUDGE via tap button or pulse signals (all tracks). FORWARD or BACKWARD.  
+* TRACK NUDGE via tap button or pulse signals track by track. FORWARD or BACKWARD.  
+* CV control of nudge, if CV is in nudging will be modulated in semitones (2 semitone, 2 nudges... example)  
+*
+* Global CV Adder (the central one) (add a CV to all TRACKS)  
+* Track by track CV ADD  
+
+## S.A.M.
+* add EOC pulse OUT when the sentence is complete
+
+## SIMPLER TAPE CONTROL
+* added a TRIG IN TOGGLER to do instantaneous change between play directions
+
+## VOLTAGE
+* a single slim editable inline FIXED VOLTAGE EMITTER 
+
+## LABEL
+* a single slim editable inline LABEL, multiline
+
+## MULTIVOLTIMETRO
+* add VOLTAGES SORT for polyphonic incoming voltages (ascending - descending)
+* add poly voltage merging
+* poly voltage are positional and overridable (if you insert a 4 chan in position position 10
+channel 10 11 12 and 13 will be used
+
+## NYSTHIOMETER
+* add ZSTD decompress utility on drag and drop of files for type "vcvx" :D
+* add ZSTD compress utility on drag and drop of directories with type "vcvx"
+
+## THE CAGE
+* solved the case of missing saved scales :D (always same problem of inverted startup v2 sequence)
+
+## POLY LPG
+* added missing bypass
+
+## ETCHASKETCHOSCOPE
+* add history to Beam Size CV in (so can act as Z channel)
+
+## LFOMULTIPHASE
+* add Poly out from output 1 (8 phases)
+
+## LFOMULTIPHASE2
+* add Poly out from output 1 (6 phases)
+
+## TZOP
+* add full detach mode (carrier modulation and any other expander mode)
+
+#**v2.0.11 (2021-12-07)**
+
+* added dark theme "spectromas_dark_01"
+* added dark theme "spectromas_darknight_02"
+
+## PROGRAMMER
+* debug the knob values not loaded correctly in V2
+* debug current stage on load (not loaded correctly in V2)
+
+
+##MASTER RECORDER 2
+* debug export mp3 when in 320kbs (this is a bug in the lameMP3 lib using the CBR mode) 
+	from this version the 320kbs (and only the 320) is done in VBR mode
+* changed default encoding mp3 mode to cbr-192kbs
+
+
+## SIMPLICITER
+* debug missing PEAK menus !
+* debug a crash deleting all SLICEs whne playing using slices
+* add menu for equal division of current selection (new slices will be added to the slice sequencer)
+
+## EQUAL DIVISION QUANTIZER
+* debug not saving status in v2
+
+
+#**v2.0.10 (2021-12-03)**
+* removed all the load fonts from constructors (not used, but just to be sure)
+
+
+#**v2.0.9 (2021-12-03)**
+* massage to mixers (delaying some inits whne coming from file)
+
+
+#**v2.0.8 (2021-12-03)**
+* font massaging
+
+#**v2.0.7 (2021-12-02)**
+## JOOPER
+* crash opening v1 files
+
+## PEPPER
+* crash opening v1 files
+
+## THECAGE
+* not saving data in fields, in v2
+
+
+#**v2.0.6 (2021-12-01)**
+
+## CONVOLVZILLA
+* crash opening it 
+
+## BITSHIFTER
+* add poly output from Output 1 (top left) (activated via contextual menu)
+
+## XATTO TIME
+* bug update displays
+
+## CLOCKABLEDELAY
+* bigger resolution to feedback
+* add ping pong mode
+
+
+## all B208 modules
+* new style courtesy of `Pyer` ! <3
+
+## New KNOBS
+*  courtesy of `Jojo blue`
+
+## New SOCKETS
+*  courtesy of `Pyer`
+
+
+## LFOMULTIPHASE
+## LFOMULTIPHASE2
+*	added scale and offset internal
+
+
+## SEVEN SEAS
+## POLYSEVEN SEAS
+*  removed multithreading in WIN and LINUX builds
+*  Now multithreading on MAC is by default OFF (you can switch ON using the contextual menu)
+
+
+## XATTO TIME
+* is a complete new module
+* works in audio and CV
+* 4 super precise delays with msecs precision from 0.01 to 9999.99 msecs 
+* tempo can be clocked with a pulse and is applied a multiplier to it
+* controls:
+*     IN (main input)
+*     IN2 (secondary input)
+*     IN2GAIN (secondary input with gain from -1 to +1) (to have very complex patch of delays of delays)
+*     DRY-WET control
+*     CV Msecs (delay is determined via CV) (different mapping functions selectable via contextual menu)
+*     MSECS DELAY drag display (from 0.01 to 9999.99 msecs. It's a drag display: the click and drag zone is IMPORTANT!
+*     FB (feedback) from -0.9999 to +0.9999 (how much of the signal is feed back into the delay)
+*     CLK (clock input for the time trigger)
+*     CLK multiplier drag display (from 0.01 to 99.99)
+*     OUT, the output
+
+## SIMPLER FILE CONTROLLER EXPANDER
+* and expander for the complex Simpler and slim Simpler to navigate list of files in directories
+* commands:
+*   PREV sample
+*   NEXT sample
+*   CV sample (voltage based selection will respect Midi notes)
+*   RND sample (random sample)
+
+## SLIM SIMPLER
+* a small sample player with all the complex simpler features
+* added list of FILES (all the files audio in the same dir will be listed and usable)
+* added limiter to size of files (via contextual menu)
+
+## METERS (DUAL MONO SLIM)
+* support for voltages added
+* using contextual menu is possible to switch from 0 to 10V to -5v to 5v representations
+
+## POLY VOLTAGE METER
+* an utility to present poly voltages, in small spaces
+* using contextual menu is possible to  switch from 0 to 10V to -5v to 5v representations
+
+## COMPLEX SIMPLER
+* full redesign
+* added CV for SPEED
+* added list of FILES (all the files audio in the same dir will be listed and usable)
+* added limiter to size of files (via contextual menu)
+
+## CONFUSING SIMPLER
+*  add a RND input for the GRID SLICE mode (insted of using the RND input in SLICE sequencer)
+
+## POLY SCALA QUANTIZER
+*  debug: was not loading the selected scale reopening a file at RACK relaunch
+
+
+## ALL MODULES
+*  debug: led display to support lights 
+
+## RAEL 
+####Imperial Aerosol Kid
+*  is the probabilistic version of ELSKER with some added features
+*  it's a PULSE and GATE programmer with LOOPING and SEQUENCING abilities
+*  there are 12 GATE PULSE programmers  
+*  every GATE PULSE PROGRAMMER contains  
+	*  TAP TRIG and TRIG IN to start the action  
+	*  TAP ON OFF and TRIG ON OFF to ACTIVATE/DEACTIVATE
+	*  in violet
+	*  a draggable display for the DELAY TIME in SECONDS from 0 to 999.999 seconds
+		*  it's the DELAY time for the GATE activation
+	* 	a draggable display for the PROBABILITY for the delay, from 0.0 to 1.0
+		* 	the final time is given by this formula
+		*  DELAY * PROBABILITY + DELAY * ((1 - PROBABILITY * RANDOM(0,1) - 0.5)
+	*  a small display to present the effective DELAY time (in violet)
+	*  in green
+	*  a small display to present the effective DURATION
+	*  a draggable display for the DURATION TIME in SECONDS from 0.001 to 999.999 seconds
+		*  it's the DURATION of the GATE
+	* 	a draggable display for the PROBABILITY for the duration, from 0.0 to 1.0
+		* 	the final time is given by this formula
+		*  DURATION * PROBABILITY + DURATION * ((1 - PROBABILITY * RANDOM(0,1) - 0.5)
+	*  GATE OUT
+	*  SOG (START of GATE pulse OUT)
+	*  EOG (END of GATE pulse OUT)
+	*  LOOP (it's like a connected cable from EOG to TRIGIN), will restart the process
+		*  it's good for gate LFOs or wobbly timers/triggers
+*	GLOBAL commands
+	*  GLOBAL TRIG (TAP TRIG + TRIG INPUT)
+		*  will trig all the 12 progreammers at once
+	*  RESET
+		*  will reset any runner programmer and also the FLAG "ONE SHOT"
+	*	1 SHOT on off mode
+		*  if active all the programmer will respond only to the first TRIG and a RESET to clean the FLAG will be needed to ARM again the PROGRAMMERS
+	*  GLOBAL GATE OUT
+	*  GLOBAL SOG OUT
+	*  GLOBAL EOG OUT
+	*  SEQUENCE mode ON OFF
+		* it's like to have a the EOG pulse out connected to the next programmer, from 1 to 12
+		  and the the 12th is connected to the 1st TRIG in
+		  
+	####  the CLOCK-IN mode
+	*  if a clock is incoming the 2 display will be activaded and will show the informations about the clock
+		*  time differential between trigs, in msecs
+		*  value in BPM of the incoming trig
+
+	*  when a clock is in the values of the programmers DURATIONS and DELAYS are no more considered as time  
+      but as multiplier of the incoming clock
+      
+      for example, let's say you are getting a 2 hz clock, 120 bpm (500 msecs between trigs)
+      
+      and your programmer is set to DELAY of 0.5 and the GATE to 0.25
+      means that the GATE will start at  (0.5 * 0.5), 0.25 seconds with a duration of (0.25 * 0.5) 0.125 msecs
+      of course thing become complicated adding probabilities
+      
+      
+       
+
+## 4HANDS
+*  feature request: added INSERT scene command, via TAP and TRIG IN  
+   the insert mode is BEFORE current scene
+
+## CONFUSING SIMPLER
+*  add a grid on off microbutton (in GRID area, close to GRID title)
+*  add a RND on EOC mode for the SLICE sequencer, is valid if GRID MODE is OFF
+*  add: if in GRID mode the RANDOM select input in the slice area will select a RANDOM GRID selection
+
+## SIMPLICITER  
+*  add a RND on EOC mode for the SLICE sequencer, is valid if GRID MODE is OFF
+*  add: if in GRID mode the RANDOM select input in the slice area will select a RANDOM GRID selection
+*  debug: if in GRID mode other action from SLICE area are disabled
+
+
+## SIMPLICITER  
+## CONFUSING SIMPLER
+*  feature request: add capability to import "cue " chunks from WAV files (we can import now Morphagene splice points)  
+   rules are:  
+   1) As in Morphagene we have splices and in SIMPLICITER slices, we import them as ranges  
+    
+     slice 1 is  splice1 to splice 2  
+     slice 2 is splice 2 to splice 3  
+     etc  
+     
+   2) If SIMPLICITER contains already slices, no splices will be imported  
+   3) if 2 or more contiguous splices are of the same value, only one will be considered  
+   4) Last splice will always create a slice going from "last splice" to "end of sample" (only special case if last splice IS last sample)
+   
+*  new export functionality, the Save as WAV command will export slices as CUE points  
+   1) A list of slices must exist  
+   2) Only the START of every slice will be exported as CUE POINT  
+        
+
+##µSQ2
+*  solved a crash removing the module
+
+
+
+## STEREOCHORUS-TREMOLO
+## NYSTEREOCHORUS
+*  DEBUG: nasty NaN at the startup (in some case)  
+
+
+## BZ-MAPPER  
+*  DEBUG: current NODEs status not highlighting
+*  
+
+## BZ-ENVELOPE  
+*  DEBUG: current NODEs status not highlighting
+
+
+## SIMPLICITER  
+*  DEBUG: "STOP recording with append" was inverting channels (#338)
+*  FEATURE REQ: press REC with SHIFT to activate automatic APPEND for current REC 
+
+
+## CONFUSING SIMPLER
+*	DEBUG: "STOP recording with append" was inverting channels (#338)
+*  FEATURE REQ: press REC with SHIFT to activate automatic APPEND for current REC 
+
+
+## POLY SCALA QUANTIZER
+*  DEBUG: in midimap mode, the root base (from contextual menu) must be applied to
+   extra outputs too (#333)
+
+
+## PROGRAMMER
+*	feature request from Pyer: add a contextual menu to use a STROBE signal to sample  
+	the incoming CV signal in ADDR. The STROBE signal is the PULSE in > and PULSE in <  
+	sockets.
+
+
+## 02NAGOL  
+*	feature request: add reload trigger
+
+
+## SLOPE DETECTOR
+*  classic CGS module
+*  detects rise steady and fall states on signals and outputs a GATE
+
+
+## CV SPREAD
+*   simple module in Serge style
+*   creates correlated CV out from a INPUT and OFFSET
+
+
+## DUAL PROCESSOR
+*  classic CGS module
+*  dual CV/audio mixer, scaler, offsetter
+
+
+## INFINITE MELODY  
+* 	highly inspired from the BOCGS MARSH panel CGS module  
+*  it's a CV melody generator based on a set of 1 BITSHIFT register + 4 analogue shift register
+*  a signal must be sent to the NOISE input
+	the signal is compared against the SENSE knob value (or to the VC SENSE input,
+	if connected)
+	when the incoming value is greater than SENSE the LED is ON, otherwise is OFF
+	the LED on represent binary 1 and OFF is binary 0.
+	If a clock signal is applied to CLOCK the bitshift register is shifed to the left
+	and the value of SENSE comparator is written in the first bit.
+	EXAMPLE with 6 clock consecutive:  
+	main register status 000 000 (only 6 bits are important)   
+	pulse 1 -> SENSE is 1 --> main register is 000 001  
+	pulse 2 -> SENSE is 1 --> main register is 000 011  
+	pulse 3 -> SENSE is 0 --> main register is 000 110  
+	pulse 4 -> SENSE is 1 --> main register is 001 101  
+	pulse 5 -> SENSE is 0 --> main register is 011 010  
+	pulse 6 -> SENSE is 1 --> main register is 110 101  
+	
+	there is a secondary clock coming in ADVANCE  
+	for every pulse in ADVANCE the main register is advanced into the 4 digital shift register  
+	
+	the ADVANCE can be in 1/f mode or f mode (called RANDOM MODE)
+
+	in f mode the result is this: 
+	simulating the main register with 110 101  
+	pulse 1:  
+	reg1 110 101  
+	reg2 000 000  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 2:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 3:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 110 101  
+	reg4 000 000  
+
+	pulse 4:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 110 101  
+	reg4 110 101  
+
+
+	in 1/f mode,   
+	register bit 1 receives the bits every pulse  
+	register 2 receives the bits every 2 pulses 
+	register 3 receives the bits every 4 pulses 
+	register 4 receives the bits every 8 pulses 
+	
+	simulating the main register with 111 111  
+
+	pulse 1:  
+	reg1 000 001  
+	reg2 000 000  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 2:  
+	reg1 000 001  
+	reg2 000 001  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 3:  
+	reg1 000 011  
+	reg2 000 001  
+	reg3 000 001  
+	reg4 000 000  
+
+	pulse 4:  
+	reg1 000 011  
+	reg2 000 001  
+	reg3 000 001  
+	reg4 000 001  
+
+	pulse 5:  
+	reg1 000 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+
+	pulse 6:  
+	reg1 000 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+	
+	pulse 7:  
+	reg1 001 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+	
+	OPERATIONS
+	I'm too tired.... :D 
+	
+	
+
+## MODULO MAGIC  
+* highly inspired from the BOCGS MARSH panel CGS module  
+* it's a CV folder based on modulo arithmetics 
+* a great explanation is visible [here in the TuesdayNightMachines
+ blog](https://github.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/blob/master/CGS%20Modulo%20Magic/CGS%20Modulo%20Magic%20Guide.md)  	
+ 
+## mix4 mix8 mix16   
+* 	visually renamed with real name (before was 4MIX 8MIX and 16MIX)   
+
+## SUSSUDIO
+*	add contextual menu command to output 0V if sample is stopped/paused
+
+## MUSICALBOX
+*	add contextual menu command to output 0V if sample is stopped/paused
+
+
+
+
+
+
+
+#**v2.0.0beta6 (2021-12-01) (git.b3b7b652 beta2 Rack Free)**
+
+## CONVOLVZILLA
+* crash opening it 
+
+## BITSHIFTER
+* add poly output from Output 1 (top left) (activated via contextual menu)
+
+#**v2.0.0beta5 (2021-11-30) (git.b3b7b652 beta2 Rack Free)**
+
+## XATTO TIME
+* bug update displays
+
+## CLOCKABLEDELAY
+* bigger resolution to feedback
+* add ping pong mode
+
+
+#**v2.0.0beta4 (2021-11-28) (git.05fa24a7)**
+
+## all B208 modules
+* new style courtesy of `Pyer` ! <3
+
+## New KNOBS
+*  courtesy of `Jojo blue`
+
+## New SOCKETS
+*  courtesy of `Pyer`
+
+
+## LFOMULTIPHASE
+## LFOMULTIPHASE2
+*	added scale and offset internal
+
+
+## SEVEN SEAS
+## POLYSEVEN SEAS
+*  removed multithreading in WIN and LINUX builds
+*  Now multithreading on MAC is by default OFF (you can switch ON using the contextual menu)
+
+
+## XATTO TIME
+* is a complete new module
+* works in audio and CV
+* 4 super precise delays with msecs precision from 0.01 to 9999.99 msecs 
+* tempo can be clocked with a pulse and is applied a multiplier to it
+* controls:
+*     IN (main input)
+*     IN2 (secondary input)
+*     IN2GAIN (secondary input with gain from -1 to +1) (to have very complex patch of delays of delays)
+*     DRY-WET control
+*     CV Msecs (delay is determined via CV) (different mapping functions selectable via contextual menu)
+*     MSECS DELAY drag display (from 0.01 to 9999.99 msecs. It's a drag display: the click and drag zone is IMPORTANT!
+*     FB (feedback) from -0.9999 to +0.9999 (how much of the signal is feed back into the delay)
+*     CLK (clock input for the time trigger)
+*     CLK multiplier drag display (from 0.01 to 99.99)
+*     OUT, the output
+
+## SIMPLER FILE CONTROLLER EXPANDER
+* and expander for the complex Simpler and slim Simpler to navigate list of files in directories
+* commands:
+*   PREV sample
+*   NEXT sample
+*   CV sample (voltage based selection will respect Midi notes)
+*   RND sample (random sample)
+
+## SLIM SIMPLER
+* a small sample player with all the complex simpler features
+* added list of FILES (all the files audio in the same dir will be listed and usable)
+* added limiter to size of files (via contextual menu)
+
+## METERS (DUAL MONO SLIM)
+* support for voltages added
+* using contextual menu is possible to switch from 0 to 10V to -5v to 5v representations
+
+## POLY VOLTAGE METER
+* an utility to present poly voltages, in small spaces
+* using contextual menu is possible to  switch from 0 to 10V to -5v to 5v representations
+
+## COMPLEX SIMPLER
+* full redesign
+* added CV for SPEED
+* added list of FILES (all the files audio in the same dir will be listed and usable)
+* added limiter to size of files (via contextual menu)
+
+## CONFUSING SIMPLER
+*  add a RND input for the GRID SLICE mode (insted of using the RND input in SLICE sequencer)
+
+## POLY SCALA QUANTIZER
+*  debug: was not loading the selected scale reopening a file at RACK relaunch
+
+
+#**v2.0.0beta3 (2021-11-02)**  
+## ALL MODULES
+*  debug: led display to support lights 
+
+## RAEL 
+####Imperial Aerosol Kid
+*  is the probabilistic version of ELSKER with some added features
+*  it's a PULSE and GATE programmer with LOOPING and SEQUENCING abilities
+*  there are 12 GATE PULSE programmers  
+*  every GATE PULSE PROGRAMMER contains  
+	*  TAP TRIG and TRIG IN to start the action  
+	*  TAP ON OFF and TRIG ON OFF to ACTIVATE/DEACTIVATE
+	*  in violet
+	*  a draggable display for the DELAY TIME in SECONDS from 0 to 999.999 seconds
+		*  it's the DELAY time for the GATE activation
+	* 	a draggable display for the PROBABILITY for the delay, from 0.0 to 1.0
+		* 	the final time is given by this formula
+		*  DELAY * PROBABILITY + DELAY * ((1 - PROBABILITY * RANDOM(0,1) - 0.5)
+	*  a small display to present the effective DELAY time (in violet)
+	*  in green
+	*  a small display to present the effective DURATION
+	*  a draggable display for the DURATION TIME in SECONDS from 0.001 to 999.999 seconds
+		*  it's the DURATION of the GATE
+	* 	a draggable display for the PROBABILITY for the duration, from 0.0 to 1.0
+		* 	the final time is given by this formula
+		*  DURATION * PROBABILITY + DURATION * ((1 - PROBABILITY * RANDOM(0,1) - 0.5)
+	*  GATE OUT
+	*  SOG (START of GATE pulse OUT)
+	*  EOG (END of GATE pulse OUT)
+	*  LOOP (it's like a connected cable from EOG to TRIGIN), will restart the process
+		*  it's good for gate LFOs or wobbly timers/triggers
+*	GLOBAL commands
+	*  GLOBAL TRIG (TAP TRIG + TRIG INPUT)
+		*  will trig all the 12 progreammers at once
+	*  RESET
+		*  will reset any runner programmer and also the FLAG "ONE SHOT"
+	*	1 SHOT on off mode
+		*  if active all the programmer will respond only to the first TRIG and a RESET to clean the FLAG will be needed to ARM again the PROGRAMMERS
+	*  GLOBAL GATE OUT
+	*  GLOBAL SOG OUT
+	*  GLOBAL EOG OUT
+	*  SEQUENCE mode ON OFF
+		* it's like to have a the EOG pulse out connected to the next programmer, from 1 to 12
+		  and the the 12th is connected to the 1st TRIG in
+		  
+	####  the CLOCK-IN mode
+	*  if a clock is incoming the 2 display will be activaded and will show the informations about the clock
+		*  time differential between trigs, in msecs
+		*  value in BPM of the incoming trig
+
+	*  when a clock is in the values of the programmers DURATIONS and DELAYS are no more considered as time  
+      but as multiplier of the incoming clock
+      
+      for example, let's say you are getting a 2 hz clock, 120 bpm (500 msecs between trigs)
+      
+      and your programmer is set to DELAY of 0.5 and the GATE to 0.25
+      means that the GATE will start at  (0.5 * 0.5), 0.25 seconds with a duration of (0.25 * 0.5) 0.125 msecs
+      of course thing become complicated adding probabilities
+      
+      
+       
+
+## 4HANDS
+*  feature request: added INSERT scene command, via TAP and TRIG IN  
+   the insert mode is BEFORE current scene
+
+## CONFUSING SIMPLER
+*  add a grid on off microbutton (in GRID area, close to GRID title)
+*  add a RND on EOC mode for the SLICE sequencer, is valid if GRID MODE is OFF
+*  add: if in GRID mode the RANDOM select input in the slice area will select a RANDOM GRID selection
+
+## SIMPLICITER  
+*  add a RND on EOC mode for the SLICE sequencer, is valid if GRID MODE is OFF
+*  add: if in GRID mode the RANDOM select input in the slice area will select a RANDOM GRID selection
+*  debug: if in GRID mode other action from SLICE area are disabled
+
+
+## SIMPLICITER  
+## CONFUSING SIMPLER
+*  feature request: add capability to import "cue " chunks from WAV files (we can import now Morphagene splice points)  
+   rules are:  
+   1) As in Morphagene we have splices and in SIMPLICITER slices, we import them as ranges  
+    
+     slice 1 is  splice1 to splice 2  
+     slice 2 is splice 2 to splice 3  
+     etc  
+     
+   2) If SIMPLICITER contains already slices, no splices will be imported  
+   3) if 2 or more contiguous splices are of the same value, only one will be considered  
+   4) Last splice will always create a slice going from "last splice" to "end of sample" (only special case if last splice IS last sample)
+   
+*  new export functionality, the Save as WAV command will export slices as CUE points  
+   1) A list of slices must exist  
+   2) Only the START of every slice will be exported as CUE POINT  
+        
+
+##µSQ2
+*  solved a crash removing the module
+
+
+#**v2.0.0beta2 (2021-10-19)**  
+
+## STEREOCHORUS-TREMOLO
+## NYSTEREOCHORUS
+*  DEBUG: nasty NaN at the startup (in some case)  
+
+#**v2.0.0beta1 (2021-10-06)**  
+
+## BZ-MAPPER  
+*  DEBUG: current NODEs status not highlighting
+*  
+
+## BZ-ENVELOPE  
+*  DEBUG: current NODEs status not highlighting
+
+
+## SIMPLICITER  
+*  DEBUG: "STOP recording with append" was inverting channels (#338)
+*  FEATURE REQ: press REC with SHIFT to activate automatic APPEND for current REC 
+
+
+## CONFUSING SIMPLER
+*	DEBUG: "STOP recording with append" was inverting channels (#338)
+*  FEATURE REQ: press REC with SHIFT to activate automatic APPEND for current REC 
+
+
+## POLY SCALA QUANTIZER
+*  DEBUG: in midimap mode, the root base (from contextual menu) must be applied to
+   extra outputs too (#333)
+
+
+## PROGRAMMER
+*	feature request from Pyer: add a contextual menu to use a STROBE signal to sample  
+	the incoming CV signal in ADDR. The STROBE signal is the PULSE in > and PULSE in <  
+	sockets.
+
+
+## 02NAGOL  
+*	feature request: add reload trigger
+
+
+## SLOPE DETECTOR
+*  classic CGS module
+*  detects rise steady and fall states on signals and outputs a GATE
+
+
+## CV SPREAD
+*   simple module in Serge style
+*   creates correlated CV out from a INPUT and OFFSET
+
+
+## DUAL PROCESSOR
+*  classic CGS module
+*  dual CV/audio mixer, scaler, offsetter
+
+
+## INFINITE MELODY  
+* 	highly inspired from the BOCGS MARSH panel CGS module  
+*  it's a CV melody generator based on a set of 1 BITSHIFT register + 4 analogue shift register
+*  a signal must be sent to the NOISE input
+	the signal is compared against the SENSE knob value (or to the VC SENSE input,
+	if connected)
+	when the incoming value is greater than SENSE the LED is ON, otherwise is OFF
+	the LED on represent binary 1 and OFF is binary 0.
+	If a clock signal is applied to CLOCK the bitshift register is shifed to the left
+	and the value of SENSE comparator is written in the first bit.
+	EXAMPLE with 6 clock consecutive:  
+	main register status 000 000 (only 6 bits are important)   
+	pulse 1 -> SENSE is 1 --> main register is 000 001  
+	pulse 2 -> SENSE is 1 --> main register is 000 011  
+	pulse 3 -> SENSE is 0 --> main register is 000 110  
+	pulse 4 -> SENSE is 1 --> main register is 001 101  
+	pulse 5 -> SENSE is 0 --> main register is 011 010  
+	pulse 6 -> SENSE is 1 --> main register is 110 101  
+	
+	there is a secondary clock coming in ADVANCE  
+	for every pulse in ADVANCE the main register is advanced into the 4 digital shift register  
+	
+	the ADVANCE can be in 1/f mode or f mode (called RANDOM MODE)
+
+	in f mode the result is this: 
+	simulating the main register with 110 101  
+	pulse 1:  
+	reg1 110 101  
+	reg2 000 000  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 2:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 3:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 110 101  
+	reg4 000 000  
+
+	pulse 4:  
+	reg1 110 101  
+	reg2 110 101  
+	reg3 110 101  
+	reg4 110 101  
+
+
+	in 1/f mode,   
+	register bit 1 receives the bits every pulse  
+	register 2 receives the bits every 2 pulses 
+	register 3 receives the bits every 4 pulses 
+	register 4 receives the bits every 8 pulses 
+	
+	simulating the main register with 111 111  
+
+	pulse 1:  
+	reg1 000 001  
+	reg2 000 000  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 2:  
+	reg1 000 001  
+	reg2 000 001  
+	reg3 000 000  
+	reg4 000 000  
+
+	pulse 3:  
+	reg1 000 011  
+	reg2 000 001  
+	reg3 000 001  
+	reg4 000 000  
+
+	pulse 4:  
+	reg1 000 011  
+	reg2 000 001  
+	reg3 000 001  
+	reg4 000 001  
+
+	pulse 5:  
+	reg1 000 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+
+	pulse 6:  
+	reg1 000 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+	
+	pulse 7:  
+	reg1 001 111  
+	reg2 000 011  
+	reg3 000 001  
+	reg4 000 001  
+	
+	OPERATIONS
+	I'm too tired.... :D 
+	
+	
+
+## MODULO MAGIC  
+* highly inspired from the BOCGS MARSH panel CGS module  
+* it's a CV folder based on modulo arithmetics 
+* a great explanation is visible [here in the TuesdayNightMachines
+ blog](https://github.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/blob/master/CGS%20Modulo%20Magic/CGS%20Modulo%20Magic%20Guide.md)  	
+ 
+## mix4 mix8 mix16   
+* 	visually renamed with real name (before was 4MIX 8MIX and 16MIX)   
+
+## SUSSUDIO
+*	add contextual menu command to output 0V if sample is stopped/paused
+
+## MUSICALBOX
+*	add contextual menu command to output 0V if sample is stopped/paused
+
+
+
 #**v1.0.17 (2020-12-05)**  
 
 FEATURE REQUEST: All modules are skinnable now (#318)   
 (Simpliciter, Sussudio,  MusicalBox, MusicalBox2 and TheCage are added)
-
 
 ## SIMPLICITER  
 *	bug: missing SYNC for the internal LFO
@@ -108,10 +999,11 @@ FEATURE REQUEST: All modules are skinnable now (#318)
 	* `Do mega random chopping and mix`  amusing command to `destroy the intelligibility` of any speech sample ! (magic!)
 	* `Fade IN and OUT, LINEAR and EXP`
 	
-* 	add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintaining the last DC output
+* add a new contextual menu `"Use START and STOP value smoothers"` because some people may prefer the old way when stopping (and starting) was not fading out (or fading in) but maintaining the last DC output
 *	add `"RELOAD"` new contextual menu: to reload the original file (maybe changed by various edit)
 
 ## COMPLEX SIMPLER  
+
 *	bug: was not saving the connected file if the file was drag&drop
 *	bug: start was delayed because the anticlick was not inited
  
@@ -121,14 +1013,12 @@ FEATURE REQUEST: All modules are skinnable now (#318)
 ## CONFUSING SIMPLER
 *	bug: start was delayed because the anticlick was not inited
 
-
 ## Heads-up on Anti-click (in various samplers)
 the more is high the more delay is introduced
 
 
 
-
-## **v1.0.15 (2020-09-22)**  
+#**v1.0.15 (2020-09-24)**  
 
 ## SIMPLICITER  
 *   setup a smoother for the start and stop (to avoid clicks, after introducing the "avoid DC signal if stopped"
