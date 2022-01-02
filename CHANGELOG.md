@@ -1,3 +1,38 @@
+#**v2.0.14 (2022-01-02)**
+
+## COMPLEX SIMPLER
+* changed in full 16 multitracks recorder, sample player
+* recording operation are with these rules:
+
+	if you connect 1 track to input L or input R, you get one track recording
+	if you connect 1 track to input L and 1 track to input R you get a 2 track recording
+	if you connect a 2 tracks to input L and no input to input R you get a 2 tracks rec
+	from 2 track to 16 track connected to input L  you'll get a 2 to 16 tracks recording, if you use a the input R you are going to override recording of the second track (to mantain compatibility of use with the past for stereo recs)
+	
+* recording now is DIRECT TO DISK (no more in memory) (but remember play is always from memory, so if you load HUGE files, you are on your OWN!!!)
+* add a flag to reset playhead of sample switch 
+
+## SLIM SIMPLER
+* changed in full 16 multitracks recorder, sample player
+* recording operation are with these rules:
+
+	if you connect 1 track to input L or input R, you get one track recording
+	if you connect 1 track to input L and 1 track to input R you get a 2 track recording
+	if you connect a 2 tracks to input L and no input to input R you get a 2 tracks rec
+	from 2 track to 16 track connected to input L  you'll get a 2 to 16 tracks recording, if you use a the input R you are going to override recording of the second track (to mantain compatibility of use with the past for stereo recs)
+	
+* recording now is DIRECT TO DISK (no more in memory) (but remember play is always from memory, so if you load HUGE files, you are on your OWN!!!)
+* add a flag to reset playhead of sample switch 
+
+## VOLTAGE Dual
+* request: add polyphony menu
+
+## SIMPLICITER MULTI
+* add the use of the SIMPLER TAPE CONTROL as expander
+
+  
+    
+   
 #**v2.0.13 (2021-12-29)**
 
 ## SIMPLICITER MULTI
