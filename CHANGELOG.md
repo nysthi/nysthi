@@ -1,3 +1,115 @@
+#**v2.1.19 (2022-07-20)**
+## THE SQUONK
+* bug: correct the input for RANDOM ALL when using pulses
+* bug: correct the randomize mode
+* feature: add rest mode for stage (pink/violet color)
+* added all the names to all the inputs and outputs and params and lights
+
+
+## LOGAN
+* removed (superseded by logan20)
+
+
+## LOGAN20
+* add "save to file" with auto-enumaration (if requested)
+* save is always choosen the first time (not anymore by default in the plugin directory)
+* removed AUTOSAVE flag (useless with auto-enumeration)
+* the START can be used also as STOP (toggle mode trig)
+
+
+## SIMPLICITER
+## SIMPLICITER MULTI
+## QUADSIMPLER
+## CONFUSING SIMPLER
+## SUSSUDIO
+## MUSICAL BOX
+## MUSICAL BOX 2
+* bug: when re-initialized, forget about connected files
+* change anticlick strategy
+
+
+#**v2.1.18 (2022-04-28)**
+## SUSSUDIO
+## MUSICAL BOX
+## MUSICAL BOX 2
+## SIMPLICITER
+## QUAD SIMPLER
+* changed strategy for the LAST sample in table (should remove the click for samples starting with DC offsets)
+
+
+#**v2.1.17 (2022-04-27)**
+## THE SQUONK
+* bug: case limit of stage pulse out remaining high
+* bug: repaired the randomize
+* bug: repaired the randomize filters
+* add minimal quantizer for the CV outs, same as SProgrammer
+* add Randomize ranges (5% 10% 20% 100%)
+
+
+#**v2.1.16 (2022-04-18)**
+## QUAD SIMPLER SLICER QUANTIZER
+
+* simd speed up, poly mode, support for 10v, 5v and 1v subdivision
+* added rounding modes (ceil, floor, round)
+* support for negative voltages
+
+## MASTER RECORDER 2
+* add disable VU METERs
+
+## SIMPLICITER
+## SIMPLICITER MULTI
+* add a menu command "DRAG & DROP files are appended".  
+  If the flag is OFF incoming sample will substitute the current one. If it's ON samples will be appended  
+  
+## JIRAJIRAECHO
+* add 10x time multiplier (via contextual menu) (current max delay 20 minutes, WOW!)
+* removed the soft clipper form input (too much harmonic distorsion)
+* BEWARE repetitions + SWELL must be well controlled! (otherwise huge levels!) (clamp to -20 +20)
+* the Panic button now acts on the 2 dc blocker (left right) too
+
+## SUSSUDIO
+## MUSICAL BOX
+## MUSICAL BOX 2
+* removed offscreens (maybe offending in VST ?)
+
+* some tweaking about the tails in samplers
+
+
+#**v2.0.15 (2022-01-03)**
+
+## MVERB, TWISTEDMVERB, HIVERB 
+* removed
+
+## SIMPLICITER MULTI
+## SIMPLICITER
+*  when importing via Drag&Drop (and only via D&D) the imported files will be always in append mode
+*  when importing via Drag&Drop(and only via D&D) automatically a slice will be generated for new appended section
+
+## SIMPLICITER MULTI
+* added 2nd mode to draw the waves
+
+## THE SQUONK
+* edge case of the missing first 3 clock in trig out when reloading a file... ;) 💪
+
+## JANNEKER TIMED
+* was not saving the time scale: solved
+
+## Poly DelayAttackHoldDecay (POLY  DAHD)
+## Poly AttackDecaySustainRelease (POLY ADSR)
+* correct number of VCA1 and VCA2 input (can be poly and in different number from GATERs and/or TRIGGERs)
+
+## Poly AttackDecay (POLY AD)
+* added menu for polyphony
+ now polyphony is the given by the minimum between POLY TRIGGERS and polyphony from Menu
+* added paraphonic mode: polyphony is always decided by the poly menu, but the output will be always FROM inner AD 1
+
+## 8 AttackDecay
+* added a menu command to transform first channel in poly 8 AD
+
+## 4 Attack(Sustain) Release - 8 Attack(Sustain) Release- 16 Attack(Sustain) Release
+* added a menu command to transform first channel in poly 4-8-116 ASR
+
+
 #**v2.0.14 (2022-01-02)**
 
 ## COMPLEX SIMPLER
@@ -21,7 +133,6 @@
 	if you connect a 2 tracks to input L and no input to input R you get a 2 tracks rec
 	from 2 track to 16 track connected to input L  you'll get a 2 to 16 tracks recording, if you use a the input R you are going to override recording of the second track (to mantain compatibility of use with the past for stereo recs)
 	
-* recording now is DIRECT TO DISK (no more in memory) (but remember play is always from memory, so if you load HUGE files, you are on your OWN!!!)
 * add a flag to reset playhead of sample switch 
 
 ## VOLTAGE Dual
@@ -30,9 +141,7 @@
 ## SIMPLICITER MULTI
 * add the use of the SIMPLER TAPE CONTROL as expander
 
-  
-    
-   
+
 #**v2.0.13 (2021-12-29)**
 
 ## SIMPLICITER MULTI
